@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Smart Attendance System</title>
+<link rel="icon" href="./images/attendance-icon.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background:#B0FC38;
+        cursor: pointer; 
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    }
+    marquee {
+        color: #03AC13;
+        font-size: 30px;
+    }
+    .ring {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        width:150px;
+        height:150px;
+        background:transparent;
+        border:3px solid #3c3c3c;
+        border-radius:50%;
+        text-align:center;
+        line-height:150px;
+        font-family:sans-serif;
+        font-size:20px;
+        color:#03AC13;
+        letter-spacing:4px;
+        text-transform:uppercase;
+        text-shadow:0 0 10px #03AC13;
+        box-shadow:0 0 20px rgb(139, 254, 93);
+    }
+    .ring:before {
+        content:'';
+        position:absolute;
+        top:-3px;
+        left:-3px;
+        width:100%;
+        height:100%;
+        border:3px solid transparent;
+        border-top:3px solid #03AC13;
+        border-right:3px solid #03AC13;
+        border-radius:50%;
+        animation:animateC 2s linear infinite;
+    }
+    span {
+        display:block;
+        position:absolute;
+        top:calc(50% - 2px);
+        left:50%;
+        width:50%;
+        height:4px;
+        background:transparent;
+        transform-origin:left;
+        animation:animate 2s linear infinite;
+    }
+    span:before {
+        content:'';
+        position:absolute;
+        width:16px;
+        height:16px;
+        border-radius:50%;
+        background:#03AC13;
+        top:-6px;
+        right:-8px;
+        box-shadow:0 0 20px #03AC13;
+    }
+    @keyframes animateC
+    {
+        0%
+        {
+            transform:rotate(0deg);
+        }
+        100%
+        {
+            transform:rotate(360deg);
+        }
+    }
+    @keyframes animate
+    {
+        0%
+        {
+            transform:rotate(45deg);
+        }
+        100%
+        {
+            transform:rotate(405deg);
+        }
+    }
+
+        @media only screen and (max-width: 600px) {
+            marquee {
+                font-size: 0px;
+            }
+        }
+</style>
+</head>
+<body onclick="redirectToLogin()">
+    <marquee direction="right" behavior="alternate" scrollamount="25">Student Smart Attendance Syatem</marquee>  
+    <div class="ring">Student
+        <span></span>
+    </div>
+<script>
+    function redirectToLogin() {
+      window.location.href = 'login.php';
+    }
+</script>
+
+</body>
+</html>

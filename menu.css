@@ -1,0 +1,167 @@
+body {
+    background-color: #B0FC38;
+    -webkit-transform: perspective(900px);
+    -webkit-transform-style: preserve-3d;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  }
+  .title{
+    width:100%;
+    text-align: center;
+  }
+  .title h1{
+    font-size:50px;
+    background: -webkit-linear-gradient(#03C04A,#234F1E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .card1 {
+    text-align:center;
+    position: absolute;
+    left: 50px;
+    width: 250px;
+    height: 350px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(#AEF359,#AEF359,#03C04A,#234F1E);
+    transition:.6s;
+    
+    transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+    box-shadow: 0px 20px 60px rgba(0,0,0, 0.5);
+  }
+  .card1:hover{
+    transform: rotatex(0deg);
+    transform: rotatez(0deg);
+    transition:.6s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  .card1 img{
+    transform: translateY(15px);
+    width:150px;
+    height:150px;
+  }
+  h3{
+    font-size:25px;
+    color:rgb(255,255,255);
+    text-shadow: 0 0 2px rgb(255,255,255);
+    transform: translatey(10px);
+  }
+  
+  p{
+    color: white;
+    text-align:center;
+    width:220px;
+    transform: translatex(12px);
+  }
+  
+  
+  .card2 {
+    text-align:center;
+    position: absolute;
+    left: 450px;
+    width: 250px;
+    height: 350px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(#AEF359,#AEF359,#03C04A,#234F1E);
+    animation: animate 1s linear infinite;
+    transition:.6s;
+    
+    transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+  }
+  .card2:hover{
+     transform: rotatex(0deg);
+    transition:.6s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  .card2 img{
+    transform: translateY(15px);
+    width:180px;
+    height:150px;
+  }
+  .card3 {
+    text-align:center;
+    position: absolute;
+    left: 850px;
+    width: 250px;
+    height: 350px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(#AEF359,#AEF359,#03C04A,#234F1E);
+    transition:.6s;
+    
+    transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+  }
+  .card3:hover{
+     transform: rotatex(0deg);
+    transition:.6s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  .card3 img{
+    transform: translateY(15px);
+    width:150px;
+    height:150px;
+  }
+
+  .card4 {
+    text-align:center;
+    position: absolute;
+    left: 1250px;
+    width: 250px;
+    height: 350px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(#AEF359,#AEF359,#03C04A,#234F1E);
+    transition:.6s;
+    
+    transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+  }
+  .card4:hover{
+    transform: rotatex(0deg);
+    transition:.6s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  .card4 img{
+    transform: translateY(15px);
+    width:150px;
+    height:150px;
+  }
+
+
+  .footer{
+    position: absolute;
+    top: 500px;
+    margin: 10px;
+    width: 100%;
+     text-align: center;
+  }
+  .footer h2{
+    font-size:18px;    
+  }
+  
+  @media only screen and (max-width: 600px) {
+    /* Adjustments for screens less than 600px width */
+    .card1, .card2, .card3, .card4 {
+      position: relative; /* Reset position */
+      left: auto; /* Reset left */
+      margin: 10px auto; /* Center align and add margin */
+      width: 80%; /* Adjust width */
+      max-width: 250px; /* Set maximum width */
+      height: auto; /* Set height to auto to fit content */
+      transform: none; /* Remove transforms */
+      box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5); /* Reset box-shadow */
+    }
+  
+    .card1 img, .card2 img, .card3 img, .card4 img {
+      width: 100%; /* Adjust image width to fill the card */
+      height: auto; /* Set height to auto to maintain aspect ratio */
+      transform: none; /* Remove image transforms */
+    }
+  
+}
